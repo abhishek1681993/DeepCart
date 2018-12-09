@@ -15,8 +15,8 @@ body {
   height: 220px;
 }
 .bg-image-custom {
-  background: url('img/hd1.jpg');
-  background-repeat: no-repeat;
+  /* background: url('img/hd1.jpg');
+  background-repeat: no-repeat; */
   width: 100%;
   height: 100vh;
 }

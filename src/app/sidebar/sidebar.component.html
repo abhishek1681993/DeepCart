@@ -1,0 +1,26 @@
+<mat-card class="demo-panel1">
+  <!-- <mat-card-title>
+    Angular Material Sidenav Demo
+  </mat-card-title> -->
+  <mat-card-content>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav opened mode="side" class="example-sidenav">
+        <div *ngFor="let _sortByItem of _sortByItems">
+          <strong>{{_sortByItem.name}}</strong>
+          <ul>
+            <li class="sideitem" *ngFor="let _sortByItemValue of _sortByItem.values">
+                <i class="fa-li fa fa-check"></i>
+              <a href="">{{_sortByItemValue.label}}</a>
+            </li>
+          </ul>
+        </div>
+      </mat-sidenav>
+    
+      <div class="example-sidenav-content">
+        <dc-card-galary></dc-card-galary>
+          <!-- <in-card-catagory></in-card-catagory> -->
+      </div>
+    
+    </mat-sidenav-container>
+  </mat-card-content>
+</mat-card>

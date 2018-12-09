@@ -1,0 +1,78 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div *ngFor="let item of imageList">
+                                <div style="width: 100px; height: 50px;" (click)="viewSelectedIndex(item)">
+                                    <a class="lightbox">
+                                        <img class="p-1" style="width: 100px; height: 50px; border: solid 1px lightblue;" src="assets/img/t-shirts/{{item.index}}.jpg" alt="Card Image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            <div *ngIf="isUpdated">
+                                <ngx-image-zoom [thumbImage]="selectedImageUrl" [magnification]="2.5" [zoomMode]="hover" [lensWidth]="100" [lensHeight]="100"
+                                    [enableLens]="true">
+                                </ngx-image-zoom>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>{{detilsInfo.name}}</strong>
+                </div>
+                <div class="card-body">
+                    <!-- <h4>Size</h4>
+                    <mat-form-field>
+                        <mat-select placeholder="Select size">
+                            <mat-option *ngFor="let size of _size" [value]="size.value">
+                                {{size.label}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <a>clear</a> -->
+                    <div>
+                        <strong>In Stock</strong>
+                    </div>
+
+
+                    <form class="example-container" [formGroup]="options">
+
+                        <h4>Size</h4>
+                        <mat-form-field>
+                            <mat-select placeholder="Select size">
+                                <mat-option *ngFor="let size of _size" [value]="size.value">
+                                    {{size.label}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <button class="btn btn-primary btn-sm">Clear</button>
+
+                        <h4>In Stock</h4>
+                        <mat-form-field [color]="options.value.color">
+                            <input matInput type="number" placeholder="quantity" formControlName="fontSize" min="0">
+                            <mat-error *ngIf="options.get('fontSize')?.invalid">Min value: 0</mat-error>
+                        </mat-form-field>
+
+                        <button class="btn btn-primary btn-sm">Add to Cart</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
