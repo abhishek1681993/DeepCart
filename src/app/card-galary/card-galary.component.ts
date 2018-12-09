@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardGalaryComponent implements OnInit {
 
-    imageList = [{index: 1}, {index: 2}, {index: 3}, {index: 4}, {index: 5}, {index: 6}, {index: 7}, {index: 8}]
+    imageList = [{index: 1, price: 200}, {index: 2, price: 200}, {index: 3, price: 200}, {index: 4, price: 200}, {index: 5, price: 200}, {index: 6, price: 200}, {index: 7, price: 200}, {index: 8, price: 200}]
     constructor() { }
 
     ngOnInit(): void { }

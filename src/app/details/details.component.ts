@@ -20,7 +20,7 @@ export class DetailsComponent {
     selectedImageUrl = 'assets/img/t-shirts/1.jpg';
     isUpdated = true;
 
-    detilsInfo = {
+    detilsInfo: any = {
 
     }
 
